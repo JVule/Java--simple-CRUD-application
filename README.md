@@ -9,3 +9,4 @@ Couple of steps are needed before you can launch application:
 1. Create database using baza_inicijalna.sql
 2. Change credentials in bazaSvojstva.properties
 3. Run application
+4. Two available roles: employee (username:zaposlenik password:zaposlenik) and parent(username:roditelj password:roditelj)
