@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.glavna.JeloPrikazController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+       <fx:include source="izbornik.fxml" />
+      <Label text="naziv" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <Label text="ugljikohidrati" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+      <Label text="masti" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+      <Label text="proteini" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <TextField fx:id="nazivTextField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TableView fx:id="jeloTableView" prefHeight="58.0" prefWidth="114.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" GridPane.rowSpan="2147483647">
+        <columns>
+          <TableColumn fx:id="nazivTableColumn" prefWidth="302.4000244140625" text="naziv" />
+          <TableColumn fx:id="proteiniTableColumn" prefWidth="97.5999755859375" text="proteini" />
+            <TableColumn fx:id="mastiTableColumn" prefWidth="93.60003662109375" text="masti" />
+            <TableColumn fx:id="ugljikohidratiTableColumn" prefWidth="107.2000732421875" text="ugljikohidrati" />
+        </columns>
+      </TableView>
+      <Spinner fx:id="uglikohidratiSpinner" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Spinner fx:id="mastiSpinner" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Spinner fx:id="proteiniSpinner" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#pretrazi" text="pretraži" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#obrisi" text="obriši" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#promjeni" text="promjeni" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+   </children>
+</GridPane>

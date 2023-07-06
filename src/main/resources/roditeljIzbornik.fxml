@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.glavna.RoditeljIzbornikController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="dolazakTableView" prefHeight="127.0" prefWidth="600.0" GridPane.columnSpan="2147483647" GridPane.rowSpan="2">
+        <columns>
+          <TableColumn fx:id="vrijemeDolaskaTableCol" prefWidth="233.60003662109375" text="Vrijeme" />
+          <TableColumn fx:id="roditeljTableCol" prefWidth="175.199951171875" text="Roditelj" />
+            <TableColumn fx:id="dijeteTableCol" prefWidth="90.4000244140625" text="Dijete" />
+            <TableColumn fx:id="grupaTableCol" prefWidth="100.0" text="Grupa" />
+        </columns>
+      </TableView>
+      <Button mnemonicParsing="false" onAction="#prikaziDodajDolazakEkran" text="dodaj" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#prikaziGlavniEkran" text="logout" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#prikaziAnketaEkran" text="anketa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+   </children>
+</GridPane>
